@@ -9,13 +9,14 @@ spec:
       app: myapp
   template:
     metadata:
-      labels: myapp
+      labels: 
+        app: myapp
     spec:
       containers:
         - name: container1
           image: manjirinaik/myapp
           ports:
-           - continerPort: 80
+           - containerPort: 80
 
 ---
 
@@ -24,9 +25,9 @@ kind: Service
 metadata:
   name: myservice
 spec:
-  type: nodePort
+  type: NodePort
   selector:
     app: myapp
   ports:
     - port: 80
-      containerPort: 80
+      targetPort: 80
