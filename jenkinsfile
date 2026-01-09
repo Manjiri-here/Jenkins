@@ -1,6 +1,7 @@
 pipeline{
     agent any
 // we need to give where docker is installed on our system so that we do not need to give /usr/local/docker path evertime, you can directly use docker
+//
 // i.e.path to docker in binary file
     environment{
         PATH = "$PATH:/usr/local/bin"
