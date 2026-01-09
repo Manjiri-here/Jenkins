@@ -5,7 +5,8 @@ metadata:
 spec:
   replicas: 1
   selector:
-    app: myapp
+    matchLabels:
+      app: myapp
   template:
     metadata:
       labels: myapp
@@ -14,7 +15,7 @@ spec:
         - name: container1
           image: manjirinaik/myapp
           ports:
-          - continerPort: 80
+           - continerPort: 80
 
 ---
 
